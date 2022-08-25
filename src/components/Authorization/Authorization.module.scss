@@ -1,0 +1,95 @@
+@use '../../assets/styles/constants.scss' as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+  height: 100vh;
+  overflow: hidden;
+  background: $color__grey;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  border-radius: 10px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  color: $color__black;
+  font-weight: 400;
+}
+
+.form {
+  padding: 0, 40px;
+  box-sizing: border-box;
+}
+
+.text_field {
+  position: relative;
+  border-bottom: 1px solid $color__grey__50;
+  margin: 30px 0;
+}
+
+.text_field input {
+  width: 100%;
+  padding: 0, 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: 100;
+}
+
+.text_field_warn {
+  position: relative;
+  border-bottom: 1px solid $color__red;
+  margin: 30px 0;
+}
+
+.text_field_warn input {
+  width: 100%;
+  padding: 0, 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: 100;
+}
+
+.text_field input::placeholder {
+  opacity: 0.5;
+}
+
+.button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  margin-top: 20px;
+  background: $color__blue;
+  border-radius: 25px;
+  font-size: 18px;
+  color: $color__white;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background: #6c7f94;
+  transition: 0.5s;
+}
+
+.alert {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 300;
+  color: $color__red;
+}

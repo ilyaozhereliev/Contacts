@@ -1,0 +1,41 @@
+@use '../../../assets/styles/constants.scss' as *;
+
+.add {
+  color: $color__black;
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  color: $color__black;
+  outline: none;
+  border: none;
+  font-size: 30px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.add:hover {
+  color: $color__green;
+  transition: 0.2s;
+}
+
+.logout {
+  margin-right: 20px;
+}
+
+.exit {
+  color: $color__black;
+  position: absolute;
+  top: 30px;
+  left: 80px;
+  color: $color__black;
+  outline: none;
+  border: none;
+  font-size: 30px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.exit:hover {
+  color: $color__red;
+  transition: 0.2s;
+}

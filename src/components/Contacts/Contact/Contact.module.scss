@@ -1,0 +1,65 @@
+@use '../../../assets/styles/constants.scss' as *;
+
+.wrapper {
+  width: 650px;
+  margin-left: 450px;
+}
+
+.contact_entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid $color__grey__50;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.name_initial {
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  font-size: 24px;
+  color: $color__white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.first_name {
+  font-size: 24px;
+  margin-left: 10px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.edit {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  border: none;
+  background: none;
+  color: $color__black;
+  cursor: pointer;
+}
+
+.edit:hover {
+  color: $color__green;
+}
+
+.delete {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.delete:hover {
+  color: $color__red;
+}
