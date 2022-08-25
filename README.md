@@ -31,5 +31,5 @@ v16.14.2
 - npm start
 
 ## Authorization data
-Login: admin@gmail.com
-Password: admin
+- Login: admin@gmail.com
+- Password: admin
