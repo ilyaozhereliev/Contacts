@@ -5,7 +5,7 @@
 
 ***
 
-## 🌐 You can try demo <a href="https://contacts-afgfcj2e6-ilyaozhereliev.vercel.app/auth" target="_blank"/>here</a>
+## 🌐 You can try demo <a href="https://contacts-9grzb6iy5-ilyaozhereliev.vercel.app/auth" target="_blank"/>here</a>
 
 ***
 
