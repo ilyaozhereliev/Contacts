@@ -4,10 +4,6 @@
 
 ---
 
-## 🌐 You can try demo <a href="https://contacts-9grzb6iy5-ilyaozhereliev.vercel.app/auth" target="_blank"/>here</a>
-
----
-
 ### Languages and Tools
 
 <div>
@@ -28,6 +24,7 @@ v16.14.2
 ## Start app
 
 - npm install
+- node server.ts
 - npm start
 
 ## Authorization data
