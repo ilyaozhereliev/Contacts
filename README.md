@@ -24,6 +24,7 @@ v16.14.2
 ## Start app
 
 - npm install
+- node server.ts
 - npm start
 
 ## Authorization data
