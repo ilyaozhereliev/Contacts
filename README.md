@@ -26,6 +26,10 @@ v16.14.2
 ***
 
 ## Start app 
-In terminal: 
-- node seerver.ts
+- npm install 
+- node server.ts
 - npm start
+
+## Authorization data
+- Login: admin@gmail.com
+- Password: admin
