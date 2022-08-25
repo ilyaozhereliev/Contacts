@@ -1,4 +1,4 @@
-# :person: Contact book app 
+# 📑 Contacts app
 
 
 ![Contacts-Google-Chrome-2022-08-25-17-29-00-_online-video-cutter com_](https://user-images.githubusercontent.com/73027259/186702370-2ebb7bef-20e6-4035-8e7f-263f21994113.gif)
