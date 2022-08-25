@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import store from './redux/store';
 import Authorization from './components/Authorization/Authorization';
@@ -15,6 +15,7 @@ root.render(
         <Routes>
           <Route path="/auth" element={<Authorization />} />
           <Route path="/contacts" element={<ContactList />} />
+          <Route path="*" element={<Navigate to="/auth" />} />
         </Routes>
       </Provider>
     </BrowserRouter>

@@ -26,7 +26,7 @@ const Authorization = () => {
 
       dispatch(addUser(response.data));
       setError(false);
-      if (users.length > 0) navigate('/contacts');
+      navigate('/contacts');
     } catch (e) {
       setError(true);
     }
