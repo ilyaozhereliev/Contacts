@@ -13,9 +13,10 @@ type ContactsState = {
 
 const initialState: ContactsState = {
   contacts: [
-    { id: 1, name: 'Pasha Tecnique', phoneNumber: '89233332473', color: '#6867AC' },
-    { id: 2, name: 'Robert de Niro', phoneNumber: '893727381632', color: '#A267AC' },
-    { id: 3, name: 'Emma Mackey', phoneNumber: '89234678263', color: '#CE7BB0' },
+    { id: 1, name: 'Natasha Ivanova', phoneNumber: '89233332473', color: '#6867AC' },
+    { id: 2, name: 'Luke Skywalker', phoneNumber: '893727381632', color: '#A267AC' },
+    { id: 3, name: 'Tati Lanaia', phoneNumber: '89234678263', color: '#CE7BB0' },
+    { id: 4, name: 'Ben Black', phoneNumber: '89236573587', color: '#D77FA1' },
   ],
 };
 
