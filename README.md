@@ -22,3 +22,10 @@
 ## Node
 
 v16.14.2
+
+***
+
+## Start app 
+In terminal: 
+- node seerver.ts
+- npm start
