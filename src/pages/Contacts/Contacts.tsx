@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/comma-dangle */
+/* eslint-disable function-paren-newline */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import {
-  AddContact, ContactItem, Modal, Search,
-} from '../../components';
+// eslint-disable-next-line object-curly-newline
+import { AddContact, ContactItem, Modal, Search } from '../../components';
 import { useAppDispatch, useAppSelector } from '../../redux/hook';
 import { deleteUser } from '../../redux/slices/usersSlice';
 import styles from './Contacts.module.scss';
@@ -19,7 +20,8 @@ const ContactsPage = () => {
   const [search, setSearch] = useState('');
 
   const filteredContacts = contacts.contacts.filter((item) =>
-    item.name.toLowerCase().includes(search));
+    item.name.toLowerCase().includes(search)
+  );
 
   const currentUserId = users[0]?.id;
 
@@ -30,7 +32,11 @@ const ContactsPage = () => {
 
   return (
     <div>
-      <button type="button" onClick={() => setShow(true)} className={styles.add}>
+      <button
+        type="button"
+        onClick={() => setShow(true)}
+        className={styles.add}
+      >
         <i className="fa-solid fa-user-plus" />
       </button>
 
@@ -40,16 +46,17 @@ const ContactsPage = () => {
       </button>
 
       <Search search={search} setSearch={setSearch} />
-
-      {filteredContacts.map((contact) => (
-        <ContactItem
-          key={contact.id}
-          name={contact.name}
-          phoneNumber={contact.phoneNumber}
-          id={contact.id}
-          color={contact.color}
-        />
-      ))}
+      <div className={styles.wrapper}>
+        {filteredContacts.map((contact) => (
+          <ContactItem
+            key={contact.id}
+            name={contact.name}
+            phoneNumber={contact.phoneNumber}
+            id={contact.id}
+            color={contact.color}
+          />
+        ))}
+      </div>
 
       {show && (
         <Modal onClose={() => setShow(false)}>

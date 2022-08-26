@@ -1,5 +1,11 @@
 @use '../../assets/styles/constants' as *;
 
+.wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .add {
   color: $color__black;
   position: absolute;

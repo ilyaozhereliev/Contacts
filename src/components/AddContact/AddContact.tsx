@@ -15,8 +15,10 @@ const AddContact: FC<AddContactProps> = ({ onClose }) => {
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
 
-  const changeName = (e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value);
-  const changePhone = (e: React.ChangeEvent<HTMLInputElement>) => setPhoneNumber(e.target.value.replace(/\D/g, ''));
+  const changeName = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setName(e.target.value);
+  const changePhone = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setPhoneNumber(e.target.value.replace(/\D/g, ''));
 
   const addNewContact = () => {
     if (name.length < 1 || phoneNumber.length < 1) return;
