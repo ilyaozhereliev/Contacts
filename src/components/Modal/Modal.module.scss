@@ -1,0 +1,53 @@
+@use '../../assets/styles/constants' as *;
+
+.overlay {
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(47, 47, 47, 0.222), rgba(0, 0, 0, 0.275));
+}
+
+.overlay_inner {
+  background: $color__white;
+  width: 600px;
+  height: 500px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: auto;
+  font-size: 1.3rem;
+  color: $color__black;
+}
+
+.overlay_inner .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: $color__black;
+  outline: none;
+  border: none;
+  font-size: 25px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: $color__red;
+}
+
+.overlay_inner .inner_box {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

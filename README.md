@@ -27,7 +27,7 @@ v16.14.2
 - node server.ts
 - npm start
 
-## Authorization data
+## AuthorizationPage data
 
 - Login: admin@gmail.com
 - Password: admin

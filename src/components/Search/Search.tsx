@@ -5,22 +5,20 @@ interface SearchProps {
   setSearch: (value: string) => void;
 }
 
-const Search: React.FC<SearchProps> = ({ search, setSearch }) => {
-  return (
-    <div>
-      <div className={styles.row}>
-        <div className={styles.search}>
-          <input
-            type="text"
-            placeholder="Search contact"
-            value={search}
-            autoFocus
-            onChange={(e) => setSearch(e.target.value.toLocaleLowerCase())}
-          />
-          <i className="fa-solid fa-magnifying-glass"></i>
-        </div>
+const Search: React.FC<SearchProps> = ({ search, setSearch }) => (
+  <div>
+    <div className={styles.row}>
+      <div className={styles.search}>
+        <input
+          type="text"
+          placeholder="Search contact"
+          value={search}
+          autoFocus
+          onChange={(e) => setSearch(e.target.value.toLocaleLowerCase())}
+        />
+        <i className="fa-solid fa-magnifying-glass"/>
       </div>
     </div>
-  );
-};
+  </div>
+);
 export default Search;
