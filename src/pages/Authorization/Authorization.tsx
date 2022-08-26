@@ -1,7 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
-import {useState} from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {useAppDispatch} from '../../redux/hook';
+
+import { useAppDispatch } from '../../redux/hook';
 import { addUser } from '../../redux/slices/usersSlice';
 import styles from './Authorization.module.scss';
 
@@ -11,7 +12,7 @@ interface User {
   password: string;
 }
 
-export const AuthorizationPage = () => {
+const AuthorizationPage = () => {
   const [error, setError] = useState<boolean>(false);
   const [email, setEmail] = useState<User['email']>('');
   const [password, setPassword] = useState<User['password']>('');
@@ -22,7 +23,7 @@ export const AuthorizationPage = () => {
   const getData = async () => {
     try {
       const response: AxiosResponse<User> = await axios.post(
-        `/auth`,
+        '/auth',
         { email, password },
         { baseURL: 'http://localhost:3001' },
       );
@@ -48,25 +49,25 @@ export const AuthorizationPage = () => {
         <h1 className={styles.header}>Sign In</h1>
 
         <form className={styles.form} onSubmit={handleSubmit}>
-            <div className={inputClassName}>
-              <input
-                type="email"
-                value={email}
-                placeholder="Login"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <span/>
-            </div>
+          <div className={inputClassName}>
+            <input
+              type="email"
+              value={email}
+              placeholder="Login"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <span />
+          </div>
 
-            <div className={inputClassName}>
-              <input
-                type="password"
-                value={password}
-                placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <span/>
-            </div>
+          <div className={inputClassName}>
+            <input
+              type="password"
+              value={password}
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <span />
+          </div>
 
           <button className={styles.button} type="submit">
             Submit
@@ -79,3 +80,4 @@ export const AuthorizationPage = () => {
   );
 };
 
+export default React.memo(AuthorizationPage);

@@ -1,57 +1,60 @@
-import React, {FC, useState} from 'react'
-import { addContact } from "../../redux/slices/contactsSlice";
-import { getRandomColor } from "../../utils";
-import { useAppDispatch } from "../../redux/hook";
-import styles from "../EditContact/EditContact.module.scss";
+import React, { FC, useState } from 'react';
+
+import { useAppDispatch } from '../../redux/hook';
+import { addContact } from '../../redux/slices/contactsSlice';
+import { getRandomColor } from '../../utils';
+import styles from '../EditContact/EditContact.module.scss';
 
 interface AddContactProps {
-    onClose: () => void;
+  onClose: () => void;
 }
 
 const AddContact: FC<AddContactProps> = ({ onClose }) => {
-    const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
-    const [name, setName] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
+  const [name, setName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
 
-    const changeName = (e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value);
-    const changePhone = (e: React.ChangeEvent<HTMLInputElement>) => setPhoneNumber(e.target.value.replace(/\D/g, ''));
+  const changeName = (e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value);
+  const changePhone = (e: React.ChangeEvent<HTMLInputElement>) => setPhoneNumber(e.target.value.replace(/\D/g, ''));
 
-    const addNewContact = () => {
-        if (name.length < 1 || phoneNumber.length < 1) return;
+  const addNewContact = () => {
+    if (name.length < 1 || phoneNumber.length < 1) return;
 
-        dispatch(addContact({ name, phoneNumber, color: getRandomColor() }));
-        onClose();
-    };
+    dispatch(addContact({ name, phoneNumber, color: getRandomColor() }));
+    onClose();
+  };
 
-    return <div>
-        <div className={styles.name_initial} />
+  return (
+    <div>
+      <div className={styles.name_initial} />
 
-        <div className={styles.info}>
-            <i className="fa-solid fa-user"/>
-            <input
-                className={styles.full_name}
-                placeholder="Name"
-                onChange={changeName}
-                value={name}
-            />
+      <div className={styles.info}>
+        <i className="fa-solid fa-user" />
+        <input
+          className={styles.full_name}
+          placeholder="Name"
+          onChange={changeName}
+          value={name}
+        />
 
-            <br />
-            <i className="fa-solid fa-phone"/>
-            <input
-                type="tel"
-                className={styles.number}
-                placeholder="Phone number"
-                maxLength={11}
-                onChange={changePhone}
-                value={phoneNumber}
-            />
-        </div>
+        <br />
+        <i className="fa-solid fa-phone" />
+        <input
+          type="tel"
+          className={styles.number}
+          placeholder="Phone number"
+          maxLength={11}
+          onChange={changePhone}
+          value={phoneNumber}
+        />
+      </div>
 
-        <button className={styles.confirm} onClick={addNewContact}>
-            Add
-        </button>
+      <button type="button" className={styles.confirm} onClick={addNewContact}>
+        Add
+      </button>
     </div>
-}
+  );
+};
 
 export default React.memo(AddContact);

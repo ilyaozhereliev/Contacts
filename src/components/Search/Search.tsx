@@ -1,3 +1,5 @@
+import React, { FC } from 'react';
+
 import styles from './Search.module.scss';
 
 interface SearchProps {
@@ -5,7 +7,7 @@ interface SearchProps {
   setSearch: (value: string) => void;
 }
 
-const Search: React.FC<SearchProps> = ({ search, setSearch }) => (
+const Search: FC<SearchProps> = ({ search, setSearch }) => (
   <div>
     <div className={styles.row}>
       <div className={styles.search}>
@@ -13,12 +15,11 @@ const Search: React.FC<SearchProps> = ({ search, setSearch }) => (
           type="text"
           placeholder="Search contact"
           value={search}
-          autoFocus
           onChange={(e) => setSearch(e.target.value.toLocaleLowerCase())}
         />
-        <i className="fa-solid fa-magnifying-glass"/>
+        <i className="fa-solid fa-magnifying-glass" />
       </div>
     </div>
   </div>
 );
-export default Search;
+export default React.memo(Search);

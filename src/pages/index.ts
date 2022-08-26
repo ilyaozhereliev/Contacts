@@ -1,2 +1,2 @@
-export * from './Contacts/Contacts'
-export * from './Authorization/Authorization'
+export * from './Authorization';
+export * from './Contacts';

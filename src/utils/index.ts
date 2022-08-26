@@ -1,2 +1,2 @@
-export * from './getInitial'
-export * from './getRandomColors'
+export * from './getInitial';
+export * from './getRandomColors';
