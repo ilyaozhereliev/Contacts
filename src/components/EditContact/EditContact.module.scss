@@ -1,5 +1,11 @@
 @use '../../assets/styles/constants' as *;
 
+.initial_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .name_initial {
   width: 85px;
   height: 85px;
@@ -80,22 +86,6 @@
   opacity: 0.5;
 }
 
-.confirm {
-  border: none;
-  width: 400px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: $color__green;
-  color: $color__white;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.confirm:hover {
-  background-color: rgb(109, 163, 151);
-  transition: 0.2s;
-}
-
 .edit {
   border: none;
   background: none;
@@ -109,5 +99,30 @@
 
 .edit:hover {
   background: $color__grey__30;
+  transition: 0.2s;
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm {
+  border: none;
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: $color__green;
+  color: $color__white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm:hover {
+  background-color: rgb(109, 163, 151);
   transition: 0.2s;
 }

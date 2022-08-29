@@ -15,7 +15,11 @@ interface EditContactProps {
 }
 
 const EditContact: FC<EditContactProps> = ({
-  id, name, color, phoneNumber, setShow,
+  id,
+  name,
+  color,
+  phoneNumber,
+  setShow,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -24,18 +28,22 @@ const EditContact: FC<EditContactProps> = ({
   const [isNameChanged, setIsNameChanged] = useState(false);
   const [isPhoneChanged, setIsPhoneChanged] = useState(false);
 
-  const changeName = (e: React.ChangeEvent<HTMLInputElement>) => setNameValue(e.target.value);
-  const changePhone = (e: React.ChangeEvent<HTMLInputElement>) => setPhoneValue(e.target.value.replace(/\D/g, ''));
+  const changeName = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setNameValue(e.target.value);
+  const changePhone = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setPhoneValue(e.target.value.replace(/\D/g, ''));
 
   const changeContact = () => {
     if (nameValue.length < 1 || phoneValue.length < 1) return;
 
-    dispatch(editContact({
-      id,
-      name: nameValue,
-      phoneNumber: phoneValue,
-      color,
-    }));
+    dispatch(
+      editContact({
+        id,
+        name: nameValue,
+        phoneNumber: phoneValue,
+        color,
+      }),
+    );
     setShow(false);
   };
 
@@ -46,7 +54,9 @@ const EditContact: FC<EditContactProps> = ({
 
   return (
     <div>
-      <div className={styles.name_initial}>{initials}</div>
+      <div className={styles.initial_wrapper}>
+        <div className={styles.name_initial}>{initials}</div>
+      </div>
 
       <div className={styles.info}>
         <i className="fa-solid fa-user" />
@@ -77,9 +87,15 @@ const EditContact: FC<EditContactProps> = ({
         </button>
       </div>
 
-      <button type="button" className={styles.confirm} onClick={changeContact}>
-        Done
-      </button>
+      <div className={styles.button_wrapper}>
+        <button
+          type="button"
+          className={styles.confirm}
+          onClick={changeContact}
+        >
+          Done
+        </button>
+      </div>
     </div>
   );
 };

@@ -29,7 +29,9 @@ const AddContact: FC<AddContactProps> = ({ onClose }) => {
 
   return (
     <div>
-      <div className={styles.name_initial} />
+      <div className={styles.initial_wrapper}>
+        <div className={styles.name_initial} />
+      </div>
 
       <div className={styles.info}>
         <i className="fa-solid fa-user" />
@@ -52,9 +54,15 @@ const AddContact: FC<AddContactProps> = ({ onClose }) => {
         />
       </div>
 
-      <button type="button" className={styles.confirm} onClick={addNewContact}>
-        Add
-      </button>
+      <div className={styles.button_wrapper}>
+        <button
+          type="button"
+          className={styles.confirm}
+          onClick={addNewContact}
+        >
+          Add
+        </button>
+      </div>
     </div>
   );
 };
