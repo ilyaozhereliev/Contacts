@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/comma-dangle */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 type User = {
@@ -21,7 +20,7 @@ const usersSlice = createSlice({
   reducers: {
     addUser(
       state,
-      action: PayloadAction<{ id: number; email: string; password: string }>
+      action: PayloadAction<{ id: number; email: string; password: string }>,
     ) {
       state.users.push({
         id: action.payload.id,

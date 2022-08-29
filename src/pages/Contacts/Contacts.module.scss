@@ -7,14 +7,13 @@
 }
 
 .add {
-  color: $color__black;
   position: absolute;
   top: 30px;
   right: 80px;
-  color: $color__black;
+  font-size: 30px;
   outline: none;
   border: none;
-  font-size: 30px;
+  color: $color__black;
   background: transparent;
   cursor: pointer;
 }
@@ -29,14 +28,13 @@
 }
 
 .exit {
-  color: $color__black;
-  position: absolute;
   top: 30px;
   left: 80px;
-  color: $color__black;
+  font-size: 30px;
+  position: absolute;
   outline: none;
   border: none;
-  font-size: 30px;
+  color: $color__black;
   background: transparent;
   cursor: pointer;
 }

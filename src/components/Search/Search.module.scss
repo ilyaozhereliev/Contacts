@@ -14,15 +14,15 @@
 }
 
 .search input {
-  height: 35px;
   width: 400px;
-  padding: 0, 5px;
-  height: 40px;
+  height: 35px;
+
   font-size: 16px;
+  font-weight: 100;
+  padding: 0, 5px;
   border: none;
   background: none;
   outline: none;
-  font-weight: 100;
 }
 
 .search input::placeholder {
@@ -30,9 +30,9 @@
 }
 
 .search i {
-  outline: none;
+  font-size: 16px;
   border: none;
   background: none;
-  font-size: 16px;
+  outline: none;
   color: $color__grey__70;
 }

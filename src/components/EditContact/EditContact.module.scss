@@ -1,7 +1,7 @@
 @use '../../assets/styles/constants' as *;
 
 .initial_wrapper {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
 }
@@ -28,46 +28,54 @@
 }
 
 .full_name {
+  margin-left: 30px;
+  margin-bottom: 40px;
+
+  font-size: 30px;
+  font-weight: 400;
+
   border: none;
   border-bottom: 1px solid $color__grey__50;
-  font-size: 30px;
-  margin-left: 30px;
-  font-weight: 400;
-  margin-bottom: 40px;
   outline-style: none;
 }
 .full_name_change {
-  border: none;
-  border-bottom: 1px solid $color__grey__50;
-  background-color: rgba(255, 216, 99, 0.2);
-  border-radius: 10px;
   font-size: 30px;
-  margin-left: 30px;
   font-weight: 400;
+
+  margin-left: 30px;
   margin-bottom: 40px;
   outline-style: none;
+
+  border: none;
+  border-bottom: 1px solid $color__grey__50;
+  border-radius: 10px;
+  background-color: rgba(255, 216, 99, 0.2);
 }
 
 .number {
+  font-size: 30px;
+  font-weight: 400;
+
+  outline: none;
+
+  margin-left: 30px;
+  margin-bottom: 40px;
   border: none;
   border-bottom: 1px solid $color__grey__50;
-  font-size: 30px;
-  margin-left: 30px;
-  font-weight: 400;
-  margin-bottom: 40px;
-  outline: none;
 }
 
 .number_change {
+  font-size: 30px;
+  font-weight: 400;
+
+  margin-left: 30px;
+  margin-bottom: 40px;
+
+  outline: none;
   border: none;
   border-bottom: 1px solid $color__grey__50;
-  background-color: rgba(255, 216, 99, 0.2);
   border-radius: 10px;
-  font-size: 30px;
-  margin-left: 30px;
-  font-weight: 400;
-  margin-bottom: 40px;
-  outline: none;
+  background-color: rgba(255, 216, 99, 0.2);
 }
 
 .full_name i {
@@ -87,13 +95,16 @@
 }
 
 .edit {
-  border: none;
-  background: none;
   width: 30px;
   height: 30px;
-  border-radius: 50px;
+
   font-size: 18px;
+
+  border-radius: 50px;
+  border: none;
+  background: none;
   color: $color__black;
+
   cursor: pointer;
 }
 
@@ -109,17 +120,16 @@
 }
 
 .confirm {
-  border: none;
   width: 400px;
   height: 40px;
+
+  font-size: 24px;
+
+  border: none;
   border-radius: 10px;
   background-color: $color__green;
   color: $color__white;
-  font-size: 24px;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .confirm:hover {

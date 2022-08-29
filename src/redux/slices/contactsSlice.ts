@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/comma-dangle */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 type Contact = {
@@ -47,7 +46,7 @@ const contactsSlice = createSlice({
         name: string;
         phoneNumber: string;
         color: string;
-      }>
+      }>,
     ) {
       state.contacts.push({
         id: Date.now(),
@@ -62,7 +61,7 @@ const contactsSlice = createSlice({
     editContact(state, action) {
       // eslint-disable-next-line no-confusing-arrow
       state.contacts = state.contacts.map(
-        (item) => (item.id === action.payload.id ? action.payload : item)
+        (item) => (item.id === action.payload.id ? action.payload : item),
         // eslint-disable-next-line function-paren-newline
       );
     },

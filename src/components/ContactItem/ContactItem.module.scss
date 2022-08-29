@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
   border-bottom: 1px solid $color__grey__50;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -16,29 +17,33 @@
 .name_initial {
   width: 55px;
   height: 55px;
-  border-radius: 50px;
-  font-size: 24px;
-  color: $color__white;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.7;
+
+  font-size: 24px;
+  border-radius: 50px;
   margin-bottom: 10px;
+  color: $color__white;
+  opacity: 0.7;
 }
 
 .first_name {
-  font-size: 24px;
   margin-left: 10px;
   padding: 10px;
+  font-size: 24px;
   flex-grow: 1;
 }
 
 .edit {
   width: 40px;
   height: 40px;
-  border-radius: 50px;
+
   font-size: 18px;
+  border-radius: 50px;
   border: none;
+
   background: none;
   color: $color__black;
   cursor: pointer;
@@ -51,12 +56,13 @@
 .delete {
   width: 40px;
   height: 40px;
-  border-radius: 50px;
+
+  margin-left: 20px;
   font-size: 18px;
+  border-radius: 50px;
   border: none;
   background: none;
   cursor: pointer;
-  margin-left: 20px;
 }
 
 .delete:hover {
